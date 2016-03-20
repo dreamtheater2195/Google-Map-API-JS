@@ -1,0 +1,83 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+#googleMap, #form_div {
+  float:left;
+  vertical-align: top;
+  margin:30px;
+}
+
+#form_div > ul > li {
+  height: 90px;
+  width: 350px;
+}
+
+#form_div > ul > li > label {
+  display: block;
+  font-size: 14px;
+  height: 24px;
+  width: 350px;
+  padding-bottom: 5px;
+}
+
+#form_div > ul > li > input {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 2px;
+    height: 24px;
+    width: 260px;
+    color: rgb(102, 102, 102);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.098) 0 1px 1px 0 inset;
+}
