@@ -1,6 +1,6 @@
 
   var map;
-  var location;
+  var loc;
   function initialize() {
     var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
     var mapProp = {
@@ -8,33 +8,48 @@
       zoom:9,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
     var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
     });
   }
+  function getLatitude(){
+    var latitude = parseInt($('input[name="latitude"]').val(),10);
+    return restrict(latitude,85)|| 0;
+  }
 
+  function getLongitude(){
+    var longitude = parseInt($('input[name="longitude"]').val(),10);
+    return  longitude || 0;
+  }
+
+  function restrict(x,max){
+    if (x>max)
+      return max;
+    if (x<-max)
+      return -max;
+    return x;
+  }
   $('#submit').click(function() {
-    var lat = document.getElementById("latitude").value;
-    var lon = document.getElementById("longitude").value;
     var message = document.getElementById("message").value;
 
-    location = new google.maps.LatLng(lat, lon);
+    loc = new google.maps.LatLng(getLatitude(),getLongitude());
 
     var marker = new google.maps.Marker({
-      position: location
+      position: loc
     });
 
     marker.setMap(map);
-    
+    map.panTo(marker.getPosition());
+
     var infowindow = new google.maps.InfoWindow({
       content: message
     });
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map,marker);
     });
-    return false;
   });
+  
   google.maps.event.addDomListener(window, 'load', initialize);

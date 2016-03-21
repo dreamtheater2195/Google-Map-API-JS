@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Google Map API JS</title>
-  <link rel="stylesheet" href="application.css" type="text/css">
-  <script src="jquery-2.2.1.min.js" type="text/javascript"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <link rel="stylesheet" href="application.css">
+  <script src="jquery-2.2.1.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 
 </head>
 <body>
@@ -15,21 +15,21 @@
     <ul>
       <li>
         <label for="latitude">Enter a latitude: </label>
-        <input id="latitude" name="latitude" type="text">
+        <input id="latitude" name="latitude" type="number">
       </li>
       <li>
         <label for="longitude">Enter a longitude: </label>
-        <input id="longitude" name="longitude" type="text">
+        <input id="longitude" name="longitude" type="number">
       </li>
       <li>
         <label for="message">Enter a message: </label>
         <input type="text" id="message" name="message" >
       </li>
       <li>
-        <a id="submit" href="#">Submit</a>
+        <button id="submit" class="reset">Submit</button>
       </li>
     </ul>
   </div>
-  <script src="application.js" type="text/javascript"></script>
+  <script src="application.js"></script>
 </body>
 </html>
